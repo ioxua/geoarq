@@ -1,0 +1,25 @@
+{
+  "name": "be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate": "ts-node -r dotenv/config ./scripts/1-generate-data.ts",
+    "generate:destructive": "npm run generate -- --destructive",
+    "clusterize": "ts-node -r dotenv/config ./scripts/2-run-clusterization.ts",
+    "serve": "http-server ./public -p 9999"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.10.0",
+    "@faker-js/faker": "^8.1.0",
+    "@types/node-kmeans": "^1.1.0",
+    "cypress": "^13.3.0",
+    "dotenv": "^16.3.1",
+    "http-server": "^14.1.1",
+    "node-kmeans": "^1.1.9",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
